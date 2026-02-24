@@ -9,8 +9,7 @@ export const MainView = () => {
       title: "Inception",
       description:
         "A thief who steals corporate secrets through dream-sharing technology.",
-      image:
-        "https://images-na.ssl-images-amazon.com/images/I/51InjRPaF7L._SX377_BO1,204,203,200_.jpg",
+      image: "./img/inception.jpg",
       director: "Christopher Nolan",
       genre: "Sci-Fi",
     },
@@ -19,8 +18,7 @@ export const MainView = () => {
       title: "Sinners",
       description:
         "Twin brothers return home to discover an even greater evil waiting.",
-      image:
-        "https://images-na.ssl-images-amazon.com/images/I/51WAikRq37L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+      image: "./img/Sinners.jpg",
       director: "Ryan Coogler",
       genre: "Horror",
     },
@@ -28,8 +26,7 @@ export const MainView = () => {
       id: 3,
       title: "The Dark Knight",
       description: "Batman faces the Joker in a battle for Gotham's soul.",
-      image:
-        "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SX381_BO1,204,203,200_.jpg",
+      image: "./img/TheDarkKnight.jpg",
       director: "Christopher Nolan",
       genre: "Action",
     },
@@ -39,7 +36,7 @@ export const MainView = () => {
 
   if (selectedmovie) {
     return (
-      <movieView
+      <MovieView
         movie={selectedmovie}
         onBackClick={() => setSelectedmovie(null)}
       />
@@ -53,7 +50,7 @@ export const MainView = () => {
   return (
     <div>
       {movies.map((movie) => (
-        <movieCard
+        <MovieCard
           key={movie.id}
           movie={movie}
           onmovieClick={(newSelectedmovie) => {
